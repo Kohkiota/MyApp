@@ -8,7 +8,6 @@
     .menutilte { font-size:14pt; font-weight:bold; margin: 0px; }
     .contnet { margin:10px; }
     .footer { text-align:right; font-size:10pt; margin: 0px -5px 0px -5px; padding:10px 10px; border-bottom:solid 1px #ccc; color:#fff; background-color:#0467e2bf; }
-
     header { text-align:left;  padding: 8px 0px; margin:-5px -5px 0px -5px;  background-color:#0467e2bf; }
     .logo { font-size: 15pt; font-weight:bold; color:#04e2ce; padding:0px 5px; margin:0 5; border: 5px solid; border-color:#fff; border-radius: 50px; vertical-align: middle;}
     .title { font-size: 15pt; font-weight:bold; color:#f6f6f6; letter-spacing:0pt; margin:0px 0px; }
