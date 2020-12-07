@@ -14,4 +14,9 @@ class MyappController extends Controller
         ];
         return view('myapp.index', $data);
     }
+    
+    public function add()
+    {
+        return view('myapp.add');
+    }
 }
