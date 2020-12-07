@@ -1,10 +1,10 @@
 @extends('layouts.myapp')
 <style>
-    .btnarea { display:flex; margin: 10px 10px; width:100%;}
+    .btnarea { display:flex; margin: 10px 0px; width:100%;}
     .btn {display: inline-block; text-align:center;  font-weight:bold; border:3px solid; text-decoration:none; }
-    .memobtn { font-size:80px; width: 100%;}
-    .halfbtna { font-size:40px; width: 50%; margin: 10px 0px 0px;}
-    .halfbtnb { font-size:40px; width: 50%; margin: 10px 0px 0px;}
+    .memobtn { font-size:80px; width: 100%; margin: 10px 0px 0px;}
+    .halfbtna { font-size:40px; width: 50%; margin: 0px 10px 0px 0px;}
+    .halfbtnb { font-size:40px; width: 50%; margin: 0px 0px 0px 0px;}
 </style>
 @section('title', 'トップページ')
 
