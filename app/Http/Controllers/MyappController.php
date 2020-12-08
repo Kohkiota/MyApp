@@ -9,10 +9,7 @@ class MyappController extends Controller
 {
     public function index(Request $request, Response $response)
     {
-        $data = [
-            'msg' => 'これはBladeを利用したサンプルです。',
-        ];
-        return view('myapp.index', $data);
+        return view('myapp.index');
     }
     
     public function add()
