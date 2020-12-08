@@ -1,7 +1,7 @@
 @extends('layouts.myapp')
 <style>
 </style>
-@section('title', 'トップページ')
+@section('title', '新規メモ')
 
 @section('content')
 <table border=1>
