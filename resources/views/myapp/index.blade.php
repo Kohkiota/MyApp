@@ -1,7 +1,7 @@
 @extends('layouts.myapp')
 <style>
     .btn {
-        display:flex;
+        display:block;
         font-weight: bold;
         border: 3px solid;
         text-decoration: none;
