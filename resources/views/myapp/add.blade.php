@@ -4,7 +4,7 @@
 @section('title', '新規メモ')
 
 @section('content')
-<form action="/myapp/add" method="POST">
+<form class="form" action="/myapp/add" method="POST">
     @csrf
 <table border=1>
     <tr>
@@ -14,6 +14,7 @@
     <tr>
         <td>年齢：</td>
         <td><input type="text" name="age"></td>
+    {{-- <td>{{ Form::select('age', ['～9歳', '10歳~', '20歳~', '30歳~', '40歳~', '50歳~', '60歳~', '70歳~', '80歳~', '90歳~', '100歳~']) }}</td> --}}
     </tr>
     <tr>
         <td>メール：</td>
@@ -33,7 +34,7 @@
     </tr>
     <tr>
         <td>内容：</td>
-        <td><input type="textarea" name="textarea" rows="4" cols="40"></td>
+        <td><textarea name="contents" cols="30" rows="10"></textarea></td>
     </tr>
     <tr>
         <td></td>
