@@ -3,8 +3,6 @@
     <title>@yield('title')</title>
     <style>
         body {
-            font-size:16px;
-            color:#999;
             margin: 0px 5px;
         }
 
