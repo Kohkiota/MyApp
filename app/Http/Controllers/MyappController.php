@@ -25,4 +25,10 @@ class MyappController extends Controller
     {
         return view('myapp.list');
     }
+
+    public function complete()
+    {
+        return view('myapp.complete');
+    }
+
 }

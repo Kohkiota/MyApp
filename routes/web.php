@@ -19,3 +19,5 @@ Route::get('myapp/add', 'App\Http\Controllers\MyappController@add')->name('myapp
 Route::post('myapp/add', 'App\Http\Controllers\MyappController@post')->name('myapp/add');
 
 Route::get('myapp/list', 'App\Http\Controllers\MyappController@list')->name('myapp/list');
+
+Route::get('myapp/complete', 'App\Http\Controllers\MyappController@complete')->name('myapp/complete');
