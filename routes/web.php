@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('myapp', 'App\Http\Controllers\MyappController@index')->name('myapp');
 
-Route::get('myapp', 'App\Http\Controllers\MyappController@index');
-Route::get('myapp/add', 'App\Http\Controllers\MyappController@add');
+Route::get('myapp/add', 'App\Http\Controllers\MyappController@add')->name('myapp/add');
+Route::post('myapp/add', 'App\Http\Controllers\MyappController@post')->name('myapp/add');
+
+Route::get('myapp/list', 'App\Http\Controllers\MyappController@list')->name('myapp/list');
