@@ -33,14 +33,14 @@
 @section('title', 'トップページ')
 
 @section('content')
-    <a class="btn memobtn" href="myapp">
+    <a class="btn memobtn" href="{{ route('myapp') }}">
         MEMO
     </a>
     <div class="btnarea">
-        <a class="btn halfbtna" href="myapp/add">
+        <a class="btn halfbtna" href="{{ route('myapp/add') }}">
             新規メモ
         </a>
-        <a class="btn halfbtnb" href="myapp/list">
+        <a class="btn halfbtnb" href="{{ route('myapp/list') }}">
             メモ一覧
         </a>
     </div>

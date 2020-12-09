@@ -16,4 +16,13 @@ class MyappController extends Controller
     {
         return view('myapp.add');
     }
+    public function post(Request $request)
+    {
+        return view('myapp.index');
+    }
+
+    public function list()
+    {
+        return view('myapp.list');
+    }
 }

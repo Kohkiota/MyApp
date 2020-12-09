@@ -5,26 +5,27 @@
 @section('title', '新規メモ')
 
 @section('content')
-<form action="/myapp/add" method="post">
+<form action="/myapp/add" method="POST">
+    @csrf
 <table border=1>
     <tr>
         <td>名前：</td>
-        <td><input type="text"></td>
+        <td><input type="text" name="name"></td>
     </tr>
     <tr>
         <td>年齢：</td>
-        <td><input type="text"></td>
+        <td><input type="text" name="age"></td>
     </tr>
     <tr>
         <td>メール：</td>
-        <td><input type="text"></td>
+        <td><input type="text" name="mail"></td>
     </tr>
     <tr>
         <td>メモタイプ：</td>
         <td>
-            <input type="radio">Text
-            <input type="radio">ToDo
-            <input type="radio">CheckList
+            <input type="radio" name="memotype">Text
+            <input type="radio" name="memotype">ToDo
+            <input type="radio" name="memotype">CheckList
         </td>
     </tr>
     <tr>
@@ -37,7 +38,7 @@
     </tr>
     <tr>
         <td></td>
-        <td><input type="submit" value="send"></td>
+        <td><input type="submit" value="送信"></td>
     </tr>
 </table>
 </form>
