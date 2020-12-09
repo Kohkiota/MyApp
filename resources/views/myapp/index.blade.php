@@ -44,9 +44,9 @@
 @section('content')
 <div class="btnarea">
     <div class="btnareaone">
-        <p><a class="btn memobtn" href="{{ route('myapp') }}">
+        <a class="btn memobtn" href="{{ route('myapp') }}">
             MEMO
-        </a></p>
+        </a>
     </div>
     <div class="btnareatwo">
         <a class="btn halfbtna" href="{{ route('myapp/add') }}">
