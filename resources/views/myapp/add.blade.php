@@ -1,6 +1,5 @@
+<link rel="stylesheet" href="{{ asset('css/add.styles.css') }}">
 @extends('layouts.myapp')
-<style>
-</style>
 
 @section('title', '新規メモ')
 
@@ -23,9 +22,9 @@
     <tr>
         <td>メモタイプ：</td>
         <td>
-            <input type="radio" name="memotype">Text
-            <input type="radio" name="memotype">ToDo
-            <input type="radio" name="memotype">CheckList
+            <input type="radio" name="memotype" value="1">Text
+            <input type="radio" name="memotype" value="2">ToDo
+            <input type="radio" name="memotype" value="3">CheckList
         </td>
     </tr>
     <tr>
