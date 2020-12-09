@@ -7,11 +7,11 @@ use Illuminate\Http\Response;
 
 class MyappController extends Controller
 {
-    public function index(Request $request, Response $response)
+    public function index()
     {
         return view('myapp.index');
     }
-    
+
     public function add()
     {
         return view('myapp.add');
