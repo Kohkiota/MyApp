@@ -13,7 +13,21 @@
     </tr>
     <tr>
         <td>年齢：</td>
-        <td><input type="text" name="age"></td>
+        <td>
+            <select name="age">
+                <option value="0">~9歳</option>
+                <option value="1">10歳~</option>
+                <option value="2">20歳~</option>
+                <option value="3">30歳~</option>
+                <option value="4">40歳~</option>
+                <option value="5">50歳~</option>
+                <option value="6">60歳~</option>
+                <option value="7">70歳~</option>
+                <option value="8">80歳~</option>
+                <option value="9">90歳~</option>
+                <option value="10">100歳~</option>
+            </select>
+        </td>
     {{-- <td>{{ Form::select('age', ['～9歳', '10歳~', '20歳~', '30歳~', '40歳~', '50歳~', '60歳~', '70歳~', '80歳~', '90歳~', '100歳~']) }}</td> --}}
     </tr>
     <tr>
@@ -23,9 +37,9 @@
     <tr>
         <td>メモタイプ：</td>
         <td>
-            <input type="radio" name="memotype" value="1">Text
-            <input type="radio" name="memotype" value="2">ToDo
-            <input type="radio" name="memotype" value="3">CheckList
+            <input type="radio" name="memotype" value="0">Text
+            <input type="radio" name="memotype" value="1">ToDo
+            <input type="radio" name="memotype" value="2">CheckList
         </td>
     </tr>
     <tr>
