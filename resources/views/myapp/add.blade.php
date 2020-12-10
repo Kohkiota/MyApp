@@ -15,17 +15,16 @@
         <td>年齢：</td>
         <td>
             <select name="age">
-                <option value="0">~9歳</option>
-                <option value="1">10歳~</option>
-                <option value="2">20歳~</option>
-                <option value="3">30歳~</option>
-                <option value="4">40歳~</option>
-                <option value="5">50歳~</option>
-                <option value="6">60歳~</option>
-                <option value="7">70歳~</option>
-                <option value="8">80歳~</option>
-                <option value="9">90歳~</option>
-                <option value="10">100歳~</option>
+                <option value="0">0~10歳</option>
+                <option value="1">11~20歳</option>
+                <option value="2">21~30歳</option>
+                <option value="3">31~40歳</option>
+                <option value="4">41~50歳</option>
+                <option value="5">51~60歳</option>
+                <option value="6">61~70歳</option>
+                <option value="7">71~80歳</option>
+                <option value="8">81~90歳</option>
+                <option value="9">91~100歳</option>
             </select>
         </td>
     {{-- <td>{{ Form::select('age', ['～9歳', '10歳~', '20歳~', '30歳~', '40歳~', '50歳~', '60歳~', '70歳~', '80歳~', '90歳~', '100歳~']) }}</td> --}}
