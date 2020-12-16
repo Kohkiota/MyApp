@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Memo;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -23,7 +24,8 @@ class MyappController extends Controller
 
     public function list()
     {
-        return view('myapp.list');
+        $items = Memo::all();
+        return view('memo.index', ['items' => $items]);
     }
 
     public function complete()
