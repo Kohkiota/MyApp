@@ -25,7 +25,7 @@ class MyappController extends Controller
     public function list()
     {
         $items = Memo::all();
-        return view('memo.index', ['items' => $items]);
+        return view('myapp.list', ['items' => $items]);
     }
 
     public function complete()
