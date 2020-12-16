@@ -21,3 +21,5 @@ Route::post('myapp/add', 'App\Http\Controllers\MyappController@post')->name('mya
 Route::get('myapp/list', 'App\Http\Controllers\MyappController@list')->name('myapp/list');
 
 Route::get('myapp/complete', 'App\Http\Controllers\MyappController@complete')->name('myapp/complete');
+
+Route::get('memo', 'App\Http\Controllers\MemoController@index');
