@@ -11,6 +11,6 @@ class Memo extends Model
 
     public function getData()
     {
-        return $this->id . ': ' . $this->name . ' (' . $this->age . ')';
+        return $this->id . ' : ' . $this->name . ' (' . $this->age . ') '. $this->mail . ' : '. $this->title . ' : ' . $this->contents;
     }
 }
