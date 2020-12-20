@@ -23,3 +23,6 @@ Route::get('myapp/list', 'App\Http\Controllers\MyappController@list')->name('mya
 Route::get('myapp/complete', 'App\Http\Controllers\MyappController@complete')->name('myapp/complete');
 
 Route::get('memo', 'App\Http\Controllers\MemoController@index');
+
+Route::get('memo/find', 'App\Http\Controllers\MemoController@find')->name('memo/find');
+Route::post('memo/find', 'App\Http\Controllers\MemoController@search')->name('memo/find');
