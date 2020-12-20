@@ -15,21 +15,35 @@ class MemoController extends Controller
         return view('memo.index', ['items' => $items]);
     }
 
-    public function list()
+    // public function list()
+    // {
+    //     $items = Memo::all();
+    //     return view('myapp.list', ['items' => $items]);
+    // }
+
+    public function findId(Request $request)
     {
-        $items = Memo::all();
-        return view('myapp.list', ['items' => $items]);
+        return view('myapp.findId', ['input' => '']);
     }
 
-    public function find(Request $request)
-    {
-        return view('memo.find', ['input' => '']);
-    }
-
-    public function search(Request $request)
+    public function searchId(Request $request)
     {
         $item = Memo::find($request->input);
-        $param = ['input' => $request->input, 'item' -> $item];
-        return view('memo.find', $param);
+        $param = ['input' => $request->input, 'item' => $item];
+        return view('myapp.findId', $param);
     }
+
+    public function findName(Request $request)
+    {
+        return view('myapp.findName', ['input' => '']);
+    }
+
+    public function searchName(Request $request)
+    {
+        $item = Memo::find($request->input);
+        $param = ['input' => $request->input, 'item' => $item];
+        return view('myapp.findName', $param);
+    }
+
+
 }

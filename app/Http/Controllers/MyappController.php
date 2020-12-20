@@ -17,10 +17,6 @@ class MyappController extends Controller
     {
         return view('myapp.add');
     }
-    public function post(Request $request)
-    {
-        return view('myapp.index');
-    }
 
     public function list()
     {
@@ -33,4 +29,8 @@ class MyappController extends Controller
         return view('myapp.complete');
     }
 
+    // public function post(Request $request)
+    // {
+    //     return view('myapp.index');
+    // }
 }

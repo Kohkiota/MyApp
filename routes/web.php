@@ -16,13 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('myapp', 'App\Http\Controllers\MyappController@index')->name('myapp');
 
 Route::get('myapp/add', 'App\Http\Controllers\MyappController@add')->name('myapp/add');
-Route::post('myapp/add', 'App\Http\Controllers\MyappController@post')->name('myapp/add');
+// Route::post('myapp/add', 'App\Http\Controllers\MyappController@post')->name('myapp/add');
 
 Route::get('myapp/list', 'App\Http\Controllers\MyappController@list')->name('myapp/list');
 
 Route::get('myapp/complete', 'App\Http\Controllers\MyappController@complete')->name('myapp/complete');
 
-Route::get('memo', 'App\Http\Controllers\MemoController@index');
+Route::get('myapp/findId', 'App\Http\Controllers\MemoController@findId')->name('myapp/findId');
+Route::post('myapp/findId', 'App\Http\Controllers\MemoController@searchId')->name('myapp/findId');
 
-Route::get('memo/find', 'App\Http\Controllers\MemoController@find')->name('memo/find');
-Route::post('memo/find', 'App\Http\Controllers\MemoController@search')->name('memo/find');
+Route::get('myapp/findName', 'App\Http\Controllers\MemoController@findName')->name('myapp/findName');
+Route::post('myapp/findName', 'App\Http\Controllers\MemoController@searchName')->name('myapp/findName');
+
+
+// Route::get('memo', 'App\Http\Controllers\MemoController@index');
