@@ -4,15 +4,27 @@
 
 @section('content')
     <table>
-    <tr><th>Name</th><th>Mail</th><th>Age</th><th>title</th><th>contents</th></tr>
+    <tr><th>Name</th><th>Age</th><th>Mail</th><th>title</th><th>contents</th></tr>
     @foreach($items as $item)
-        <tr>
-            <td>{{ optional($item)->name }}</td>
-            <td>{{ optional($item)->age }}</td>
-            <td>{{ optional($item)->mail }}</td>
-            <td>{{ optional($item)->title }}</td>
-            <td>{{ optional($item)->contents }}</td>
-        </tr>
+    <tr>
+        <td>{{ $item->name }}</td>
+        <td>
+            @if( $item->age==0 )    0~10歳
+            @elseif( $item->age==1 )    11~20歳
+            @elseif( $item->age==2 )    21~30歳
+            @elseif( $item->age==3 )    31~40歳
+            @elseif( $item->age==4 )    41~50歳
+            @elseif( $item->age==5 )    51~60歳
+            @elseif( $item->age==6 )    61~70歳
+            @elseif( $item->age==7 )    71~80歳
+            @elseif( $item->age==8 )    81~90歳
+            @elseif( $item->age==9 )    91~100歳
+            @endif
+        </td>
+        <td>{{ $item->mail }}</td>
+        <td>{{ $item->title }}</td>
+        <td>{{ $item->contents }}</td>
+    </tr>
     @endforeach
     </table>
 @endsection
