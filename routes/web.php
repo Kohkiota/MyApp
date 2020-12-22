@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('myapp', 'App\Http\Controllers\MyappController@index')->name('myapp');
 
-Route::get('myapp/add', 'App\Http\Controllers\MyappController@add')->name('myapp/add');
-// Route::post('myapp/add', 'App\Http\Controllers\MyappController@post')->name('myapp/add');
-
 Route::get('myapp/list', 'App\Http\Controllers\MyappController@list')->name('myapp/list');
 
 Route::get('myapp/complete', 'App\Http\Controllers\MyappController@complete')->name('myapp/complete');
@@ -28,5 +25,7 @@ Route::post('myapp/findId', 'App\Http\Controllers\MemoController@searchId')->nam
 Route::get('myapp/findName', 'App\Http\Controllers\MemoController@findName')->name('myapp/findName');
 Route::post('myapp/findName', 'App\Http\Controllers\MemoController@searchName')->name('myapp/findName');
 
+Route::get('myapp/add', 'App\Http\Controllers\MyappController@add')->name('myapp/add');
+Route::post('myapp/add', 'App\Http\Controllers\MyappController@create')->name('myapp/add');
 
 // Route::get('memo', 'App\Http\Controllers\MemoController@index');

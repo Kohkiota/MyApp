@@ -13,9 +13,18 @@ class MyappController extends Controller
         return view('myapp.index');
     }
 
-    public function add()
+    public function add(Request $request)
     {
         return view('myapp.add');
+    }
+    public function create(Request $request)
+    {
+        $this->validate($request, Memo::$rules);
+        $memo = new Memo;
+        $form = $request->all();
+        unset($form['_token']);
+        $memo->fill($form)->save();
+        return redirect('/myapp/list');
     }
 
     public function list()

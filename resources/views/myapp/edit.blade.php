@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/add.styles.css') }}">
 @extends('layouts.myapp')
 
-@section('title', '新規メモ')
+@section('title', 'メモ編集')
 
 @section('content')
     @if (count($errors) > 0)
@@ -14,13 +14,12 @@
     </div>
     @endif
 
-<form class="form" action="/myapp/add" method="post">
+<form class="form" action="/myapp/edit" method="post">
 <table border=1>
     @csrf
-    <input type="hidden" name="id" value="{{ $form->id }}">
     <tr>
         <td>名前：</td>
-        <td><input type="text" name="name" value="{{ $form->name }}"></td>
+        <td><input type="text" name="name" value="{{ old('name') }}"></td>
     </tr>
     <tr>
         <td>年齢：</td>
@@ -42,7 +41,7 @@
     </tr>
     <tr>
         <td>メール：</td>
-        <td><input type="text" name="mail" value="{{ $form->mail }}"></td>
+        <td><input type="text" name="mail" value="{{ old('mail') }}"></td>
     </tr>
     <tr>
         <td>メモタイプ：</td>
@@ -54,11 +53,11 @@
     </tr>
     <tr>
         <td>タイトル：</td>
-        <td><input type="text" name="title" value="{{ $form->title }}"></td>
+        <td><input type="text" name="title" value="{{ old('title') }}"></td>
     </tr>
     <tr>
         <td>内容：</td>
-        <td><textarea name="contents" cols="30" rows="10">{{ $form->contents }}</textarea></td>
+        <td><textarea name="contents" cols="30" rows="10">{{ old('contents') }}</textarea></td>
     </tr>
     <tr>
         <td></td>
