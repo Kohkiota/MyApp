@@ -17,9 +17,10 @@
 <form class="form" action="/myapp/edit" method="post">
 <table border=1>
     @csrf
+    <input type="hidden" name="id" value="{{ $form->id }}">
     <tr>
         <td>名前：</td>
-        <td><input type="text" name="name" value="{{ old('name') }}"></td>
+        <td><input type="text" name="name" value="{{ $form->name }}"></td>
     </tr>
     <tr>
         <td>年齢：</td>
@@ -41,7 +42,7 @@
     </tr>
     <tr>
         <td>メール：</td>
-        <td><input type="text" name="mail" value="{{ old('mail') }}"></td>
+        <td><input type="text" name="mail" value="{{ $form->mail }}"></td>
     </tr>
     <tr>
         <td>メモタイプ：</td>
@@ -53,11 +54,11 @@
     </tr>
     <tr>
         <td>タイトル：</td>
-        <td><input type="text" name="title" value="{{ old('title') }}"></td>
+        <td><input type="text" name="title" value="{{ $form->title }}"></td>
     </tr>
     <tr>
         <td>内容：</td>
-        <td><textarea name="contents" cols="30" rows="10">{{ old('contents') }}</textarea></td>
+        <td><textarea name="contents" cols="30" rows="10">{{ $form->contents }}</textarea></td>
     </tr>
     <tr>
         <td></td>
