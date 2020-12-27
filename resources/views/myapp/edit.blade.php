@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/add.styles.css') }}">
+<link rel="stylesheet" href="{{ asset('css/edit.styles.css') }}">
 @extends('layouts.myapp')
 
 @section('title', 'メモ編集')
@@ -8,13 +8,13 @@
     <div>
         <ul>
             @foreach ($errors->all() as $error)
-                <li>{{  $error }}</li>
+                <li>{{ $error }}</li>
             @endforeach
         </ul>
     </div>
     @endif
 
-<form class="form" action="/myapp/edit" method="post">
+<form action="/myapp/edit" method="post" class="form">
 <table border=1>
     @csrf
     <input type="hidden" name="id" value="{{ $form->id }}">
@@ -61,7 +61,6 @@
         <td><textarea name="contents" cols="30" rows="10">{{ $form->contents }}</textarea></td>
     </tr>
     <tr>
-        <td></td>
         <td><input type="submit" value="送信"></td>
     </tr>
 </table>
