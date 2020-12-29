@@ -13,19 +13,6 @@ class MyappController extends Controller
         return view('myapp.index');
     }
 
-    public function add(Request $request)
-    {
-        return view('myapp.add');
-    }
-    public function create(Request $request)
-    {
-        $this->validate($request, Memo::$rules);
-        $memo = new Memo;
-        $form = $request->all();
-        unset($form['_token']);
-        $memo->fill($form)->save();
-        return redirect('/myapp/list');
-    }
 
     public function list()
     {
@@ -38,8 +25,34 @@ class MyappController extends Controller
         return view('myapp.complete');
     }
 
-    // public function post(Request $request)
-    // {
-    //     return view('myapp.index');
-    // }
+
+    public function add()
+    {
+        return view('myapp.add');
+    }
+    public function create(Request $request)
+    {
+        $this->validate($request, Memo::$rules);
+        $memo = new Memo;
+        $form = $request->all();
+        unset($form['_token']);
+        $memo->fill($form)->save();
+        return redirect('/myapp/complete');
+    }
+
+    public function edit(Request $request)
+    {
+        $memo = Memo::find($request->id);
+        return view('myapp.edit', ['form' => $memo]);
+    }
+
+    public function update(Request $request)
+    {
+        $this->validate($request, Memo::$rules);
+        $memo = Memo::find($request->id);
+        $form = $request->all();
+        unset($form['_token']);
+        $memo->fill($form)->save();
+        return redirect('/myapp/complete');
+    }
 }
