@@ -1,7 +1,7 @@
-<link rel="stylesheet" href="{{ asset('css/edit.styles.css') }}">
+<link rel="stylesheet" href="{{ asset('css/del.styles.css') }}">
 @extends('layouts.myapp')
 
-@section('title', 'メモ編集')
+@section('title', 'メモ除去')
 
 @section('content')
     @if (count($errors) > 0)
@@ -14,7 +14,7 @@
     </div>
     @endif
 
-<form action="/myapp/edit" method="post" class="form">
+<form action="/myapp/del" method="post" class="form">
 <table border=1>
     @csrf
     <input type="hidden" name="id" value="{{ $form->id }}">
@@ -61,8 +61,8 @@
         <td><textarea name="contents" cols="30" rows="10">{{ $form->contents }}</textarea></td>
     </tr>
     <tr>
-        <td><input type="submit" value="編集"></td>
-        <td>本当に上記内容に変更しますか？？</td>
+        <td><input type="submit" value="削除"></td>
+        <td>本当に削除しますか？？</td>
     </tr>
 </table>
 </form>

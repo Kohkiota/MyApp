@@ -1,10 +1,11 @@
+<link rel="stylesheet" href="{{ asset('css/list.styles.css') }}">
 @extends('layouts.myapp')
 
 @section('title', 'メモ一覧')
 
 @section('content')
     <table>
-    <tr><th>Name</th><th>Age</th><th>Mail</th><th>title</th><th>contents</th></tr>
+    <tr><th>Name</th><th>Age</th><th>Mail</th><th>title</th><th>contents</th><th>変更</th></tr>
     @foreach($items as $item)
     <tr>
         <td>{{ $item->name }}</td>
@@ -24,6 +25,13 @@
         <td>{{ $item->mail }}</td>
         <td>{{ $item->title }}</td>
         <td>{{ $item->contents }}</td>
+        <td class="btnarea">
+            <form action="/myapp/edit" method="post">
+                <a href="/myapp/edit?id={{ $item->id }}"  class="btn">編集</a>
+                <a href="/myapp/del?id={{ $item->id }}"  class="btn">除去</a>
+            </form>
+        </td>
+
     </tr>
     @endforeach
     </table>

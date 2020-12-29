@@ -28,4 +28,8 @@ Route::post('myapp/findName', 'App\Http\Controllers\MemoController@searchName')-
 Route::get('myapp/add', 'App\Http\Controllers\MyappController@add')->name('myapp/add');
 Route::post('myapp/add', 'App\Http\Controllers\MyappController@create')->name('myapp/add');
 
-// Route::get('memo', 'App\Http\Controllers\MemoController@index');
+Route::get('myapp/edit', 'App\Http\Controllers\MyappController@edit')->name('myapp/edit');
+Route::post('myapp/edit', 'App\Http\Controllers\MyappController@update')->name('myapp/edit');
+
+Route::get('myapp/del', 'App\Http\Controllers\MyappController@delete')->name('myapp/del');
+Route::post('myapp/del', 'App\Http\Controllers\MyappController@remove')->name('myapp/del');

@@ -48,11 +48,25 @@ class MyappController extends Controller
 
     public function update(Request $request)
     {
-        $this->validate($request, Memo::$rules);
+        // DB::transaction(function() use($request) {
+            $this->validate($request, Memo::$rules);
+            $memo = Memo::find($request->id);
+            $form = $request->all();
+            unset($form['_token']);
+            $memo->fill($form)->save();
+        // });
+        return redirect('/myapp/complete');
+    }
+
+    public function delete(Request $request)
+    {
         $memo = Memo::find($request->id);
-        $form = $request->all();
-        unset($form['_token']);
-        $memo->fill($form)->save();
+        return view('myapp.del', ['form' => $memo]);
+    }
+
+    public function remove(Request $request)
+    {
+        Memo::find($request->id)->delete();
         return redirect('/myapp/complete');
     }
 }
