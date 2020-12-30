@@ -28,7 +28,7 @@ class MemosTableSeeder extends Seeder
             'name' => '大輔kssssss',
             'age' => '6',
             'mail' => 'ajfklss.adls@taiyou.ne.jp',
-            'memotype' => '8',
+            'memotype' => '1',
             'title' => '初めてのメモ',
             'contents' => '本日は制限されていてよいと思います。',
         ];
