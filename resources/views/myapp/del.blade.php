@@ -64,6 +64,10 @@
         <td><input type="submit" value="削除"></td>
         <td>本当に削除しますか？？</td>
     </tr>
+    <tr>
+        <td><a href="/myapp/list" class="btn">戻る</a></td>
+    </tr>
+
 </table>
 </form>
 @endsection
