@@ -28,7 +28,7 @@
         <td class="btnarea">
             <form action="/myapp/edit" method="post">
                 <a href="/myapp/edit?id={{ $item->id }}"  class="btn">編集</a>
-                <a href="/myapp/del?id={{ $item->id }}"  class="btn">除去</a>
+                <a href="/myapp/del?id={{ $item->id }}"  class="btn">削除</a>
             </form>
         </td>
 
