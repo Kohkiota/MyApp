@@ -33,3 +33,6 @@ Route::post('myapp/edit', 'App\Http\Controllers\MyappController@update')->name('
 
 Route::get('myapp/del', 'App\Http\Controllers\MyappController@delete')->name('myapp/del');
 Route::post('myapp/del', 'App\Http\Controllers\MyappController@remove')->name('myapp/del');
+
+Route::get('myapp/session', 'App\Http\Controllers\MyappController@ses_get')->name('myapp/session');
+Route::post('myapp/session', 'App\Http\Controllers\MyappController@ses_put')->name('myapp/session');

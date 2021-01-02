@@ -69,4 +69,23 @@ class MyappController extends Controller
         Memo::find($request->id)->delete();
         return redirect('/myapp/complete')->with('flash_message', '削除が完了しました。');
     }
+
+    public function ses_get(Request $request)
+    {
+        $sesdata = $request->session()->get('after_session');
+        return view('myapp.session', ['session_data' => $sesdata]);
+    }
+    public function ses_put(Request $request)
+    {
+        $add = $request->after_add;
+        $edit = $request->after_edit;
+        $del = $request->after_del;
+        $ses = $request->after_session;
+        $request->session()->put('after_add', $add);
+        $request->session()->put('after_edit', $edit);
+        $request->session()->put('after_del', $del);
+        $request->session()->put('after_session', $ses);
+
+        return redirect('myapp/session');
+    }
 }
