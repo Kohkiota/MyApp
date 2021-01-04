@@ -35,11 +35,14 @@ class MyappController extends Controller
     }
     public function create(Request $request)
     {
-        $this->validate($request, Memo::$rules);
-        $memo = new Memo;
-        $form = $request->all();
-        unset($form['_token']);
-        $memo->fill($form)->save();
+        DB::transaction(function() use($request) {
+            $this->validate($request, Memo::$rules);
+            $memo = new Memo;
+            $form = $request->all();
+            unset($form['_token']);
+            $memo->fill($form)->save();
+        });
+
         return redirect('/myapp/complete')->with('flash_message', '新規メモ追加が完了しました。');
     }
 
@@ -51,13 +54,13 @@ class MyappController extends Controller
 
     public function update(Request $request)
     {
-        // DB::transaction(function() use($request) {
+        DB::transaction(function() use($request) {
             $this->validate($request, Memo::$rules);
             $memo = Memo::find($request->id);
             $form = $request->all();
             unset($form['_token']);
             $memo->fill($form)->save();
-        // });
+        });
         return redirect('/myapp/complete')->with('flash_message', '編集が完了しました。');
     }
 
