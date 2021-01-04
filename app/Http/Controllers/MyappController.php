@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Memo;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+// use Illuminate\Database\Eloquest\Model;
+use Illuminate\Support\Facades\DB;
 
 class MyappController extends Controller
 {
@@ -14,9 +16,10 @@ class MyappController extends Controller
     }
 
 
-    public function list()
+    public function list(Request $request)
     {
-        $items = Memo::all();
+        // $items = Memo::all();
+        $items = DB::table('memos')->simplePaginate(5);
         return view('myapp.list', ['items' => $items]);
     }
 
