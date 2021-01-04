@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/list.styles.css') }}">
+{{-- <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min/css"> --}}
+
+
 @extends('layouts.myapp')
 
 @section('title', 'メモ一覧')

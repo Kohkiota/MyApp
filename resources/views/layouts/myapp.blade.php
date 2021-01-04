@@ -1,3 +1,5 @@
+{{-- <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min/css"> --}}
+
 <html>
 <head>
     <title>@yield('title')</title>
