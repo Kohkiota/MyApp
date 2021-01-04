@@ -58,7 +58,6 @@ class MyappController extends Controller
             unset($form['_token']);
             $memo->fill($form)->save();
         // });
-        // return redirect('/myapp/complete')->with('flash_message', '編集が完了しました。');
         return redirect('/myapp/complete')->with('flash_message', '編集が完了しました。');
     }
 
@@ -71,7 +70,6 @@ class MyappController extends Controller
     public function remove(Request $request)
     {
         Memo::find($request->id)->delete();
-        // return redirect('/myapp/complete')->with('flash_message', '削除が完了しました。');
         return redirect('/myapp/complete')->with('flash_message', '削除が完了しました。');
     }
 
