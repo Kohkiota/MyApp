@@ -40,7 +40,7 @@ class MyappController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $memo->fill($form)->save();
-        return redirect('/myapp/complete');
+        return redirect('/myapp/complete')->with('flash_message', '新規メモ追加が完了しました。');
     }
 
     public function edit(Request $request)
@@ -58,6 +58,7 @@ class MyappController extends Controller
             unset($form['_token']);
             $memo->fill($form)->save();
         // });
+        // return redirect('/myapp/complete')->with('flash_message', '編集が完了しました。');
         return redirect('/myapp/complete')->with('flash_message', '編集が完了しました。');
     }
 
@@ -70,13 +71,23 @@ class MyappController extends Controller
     public function remove(Request $request)
     {
         Memo::find($request->id)->delete();
+        // return redirect('/myapp/complete')->with('flash_message', '削除が完了しました。');
         return redirect('/myapp/complete')->with('flash_message', '削除が完了しました。');
     }
 
+    //とりあえずフラッシュ（上記）で対応する。
     public function ses_get(Request $request)
     {
-        $sesdata = $request->session()->get('after_session');
-        return view('myapp.session', ['session_data' => $sesdata]);
+        $add = $request->session()->get('after_add');
+        $edit = $request->session()->get('after_edit');
+        $del = $request->session()->get('after_del');
+        $session = $request->session()->get('after_session');
+        return view('myapp.session', [
+            'after_add' => $add,
+            'after_edit' => $edit,
+            'after_del' => $del,
+            'after_session' => $session,
+        ]);
     }
     public function ses_put(Request $request)
     {
