@@ -1,10 +1,11 @@
 １月６日    修正予定の項目
-paginatorの巨大＜＞を修正→オリジナルpaginatorの作成
+
 編集、削除ページ兼確認ページとなっているので、別途formのない入力不可な確認ページを追加。
 sessionメッセージを、DBに自分で設定した値を使用するよう修正
 seederをfakerでやる
 https://www.youtube.com/watch?v=xOtnux8XRdk&list=PLCyDm9NTxdhLnA4tH5ToQR1K1LcWIAdOa&index=8
 
 ※cssはきりがないので後回し
+paginatorの巨大＜＞を修正→オリジナルpaginatorの作成
 sessionメッセージ入力画面のcssが効かない問題
 セッションメッセージをJS使ってフェードアウトするようにする。

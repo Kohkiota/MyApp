@@ -18,8 +18,8 @@ class MyappController extends Controller
 
     public function list(Request $request)
     {
-        // $items = Memo::all();
-        $items = DB::table('memos')->paginate(5);
+        // $items = DB::table('memos')->paginate(5);
+        $items =  Memo::simplePaginate(5);
         return view('myapp.list', ['items' => $items]);
     }
 
