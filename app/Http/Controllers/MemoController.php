@@ -4,24 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Memo;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
 
 class MemoController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         $items = Memo::all();
         return view('memo.index', ['items' => $items]);
     }
 
-    // public function list()
-    // {
-    //     $items = Memo::all();
-    //     return view('myapp.list', ['items' => $items]);
-    // }
 
-    public function findId(Request $request)
+    public function findId()
     {
         return view('myapp.findId', ['input' => '']);
     }
@@ -33,7 +26,7 @@ class MemoController extends Controller
         return view('myapp.findId', $param);
     }
 
-    public function findName(Request $request)
+    public function findName()
     {
         return view('myapp.findName', ['input' => '']);
     }
