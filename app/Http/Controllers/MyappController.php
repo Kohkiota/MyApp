@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Memo;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-// use Illuminate\Database\Eloquest\Model;
 use Illuminate\Support\Facades\DB;
 
 class MyappController extends Controller
@@ -16,7 +14,7 @@ class MyappController extends Controller
     }
 
 
-    public function list(Request $request)
+    public function list()
     {
         // $items = Memo::all();
         $items = DB::table('memos')->paginate(5);
@@ -48,7 +46,8 @@ class MyappController extends Controller
 
     public function edit(Request $request)
     {
-        $memo = Memo::find($request->id);
+        $requestId = $request->id;
+        $memo = Memo::find($requestId);
         return view('myapp.edit', ['form' => $memo]);
     }
 
@@ -56,7 +55,8 @@ class MyappController extends Controller
     {
         DB::transaction(function() use($request) {
             $this->validate($request, Memo::$rules);
-            $memo = Memo::find($request->id);
+            $requestId = $request->id;
+            $memo = Memo::find($requestId);
             $form = $request->all();
             unset($form['_token']);
             $memo->fill($form)->save();
@@ -66,13 +66,15 @@ class MyappController extends Controller
 
     public function delete(Request $request)
     {
-        $memo = Memo::find($request->id);
+        $requestId = $request->id;
+        $memo = Memo::find($requestId);
         return view('myapp.del', ['form' => $memo]);
     }
 
     public function remove(Request $request)
     {
-        Memo::find($request->id)->delete();
+        $requestId = $request->id;
+        Memo::find($requestId)->delete();
         return redirect('/myapp/complete')->with('flash_message', '削除が完了しました。');
     }
 
