@@ -7,18 +7,14 @@ use Illuminate\Http\Request;
 
 class MemoController extends Controller
 {
+    // 全てのMemoインスタンスを表示
     public function index()
     {
         $items = Memo::all();
         return view('memo.index', ['items' => $items]);
     }
 
-
-    public function findId()
-    {
-        return view('myapp.findId', ['input' => '']);
-    }
-
+    // inputのIDでMemoインスタンスを検索
     public function searchId(Request $request)
     {
         $item = Memo::find($request->input);
@@ -26,11 +22,8 @@ class MemoController extends Controller
         return view('myapp.findId', $param);
     }
 
-    public function findName()
-    {
-        return view('myapp.findName', ['input' => '']);
-    }
 
+    // inputした名前でMemoインスタンスを検索
     public function searchName(Request $request)
     {
         $item = Memo::find($request->input);
