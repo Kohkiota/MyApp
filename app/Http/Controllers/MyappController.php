@@ -72,9 +72,11 @@ class MyappController extends Controller
 
     public function remove(Request $request)
     {
-        $requestId = $request->id;
-        Memo::find($requestId)->delete();
-        return redirect('/myapp/complete')->with('flash_message', '削除が完了しました。');
+        DB::transaction(function() use($request) {
+            $requestId = $request->id;
+            Memo::find($requestId)->delete();
+            return redirect('/myapp/complete')->with('flash_message', '削除が完了しました。');
+        });
     }
 
     //とりあえずフラッシュ（上記）で対応する。
