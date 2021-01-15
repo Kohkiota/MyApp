@@ -8,6 +8,15 @@
 
 @section('content')
     <a href="/myapp/session">Session編集へアクセス。DB利用</a>
+    @if ($errors->any())
+    <div>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <table>
     <tr><th>Name</th><th>Age</th><th>Mail</th><th>title</th><th>contents</th><th>変更</th></tr>
     @foreach($items as $item)

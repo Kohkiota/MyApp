@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Memo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\CreateMemoRequest;
 
 class MyappController extends Controller
 {
@@ -30,10 +31,11 @@ class MyappController extends Controller
     {
         return view('myapp.add');
     }
-    public function create(Request $request)
+    // public function create(Request $request)
+    public function create(CreateMemoRequest $request)
     {
         DB::transaction(function() use($request) {
-            $this->validate($request, Memo::$rules);
+            // $this->validate($request, Memo::$rules);
             $memo = new Memo;
             $form = $request->all();
             unset($form['_token']);
