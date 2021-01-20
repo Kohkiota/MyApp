@@ -18,19 +18,6 @@
     </div>
 </header>
 
-{{-- <script>
-
-(function() {
-    'use strict';
-
-    // フラッシュメッセージのfadeout
-    $(function(){
-        $('.flash_message').fadeOut(3000);
-    });
-
-})();
-
-</script> --}}
 
 @if (session('flash_message'))
     <div class="flash_message">
