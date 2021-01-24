@@ -14,7 +14,6 @@ class MyappController extends Controller
         return view('myapp.index');
     }
 
-
     public function list()
     {
         $items = Memo::paginate(5);
@@ -26,16 +25,14 @@ class MyappController extends Controller
         return view('myapp.complete');
     }
 
-
     public function add()
     {
         return view('myapp.add');
     }
-    // public function create(Request $request)
+
     public function create(CreateMemoRequest $request)
     {
         DB::transaction(function() use($request) {
-            // $this->validate($request, Memo::$rules);
             $memo = new Memo;
             $form = $request->all();
             unset($form['_token']);
