@@ -16,44 +16,44 @@ class AgesTableSeeder extends Seeder
     {
         $array = [
             [
-                'agesId' => '0',
-                'agesRange' => '0~10歳',
+                'ageId' => '0',
+                'ageRange' => '0~10歳',
             ],
             [
-                'agesId' => '1',
-                'agesRange' => '11~20歳',
+                'ageId' => '1',
+                'ageRange' => '11~20歳',
             ],
             [
-                'agesId' => '2',
-                'agesRange' => '21~30歳',
+                'ageId' => '2',
+                'ageRange' => '21~30歳',
             ],
             [
-                'agesId' => '3',
-                'agesRange' => '31~40歳',
+                'ageId' => '3',
+                'ageRange' => '31~40歳',
             ],
             [
-                'agesId' => '4',
-                'agesRange' => '41~50歳',
+                'ageId' => '4',
+                'ageRange' => '41~50歳',
             ],
             [
-                'agesId' => '5',
-                'agesRange' => '51~60歳',
+                'ageId' => '5',
+                'ageRange' => '51~60歳',
             ],
             [
-                'agesId' => '6',
-                'agesRange' => '61~70歳',
+                'ageId' => '6',
+                'ageRange' => '61~70歳',
             ],
             [
-                'agesId' => '7',
-                'agesRange' => '71~80歳',
+                'ageId' => '7',
+                'ageRange' => '71~80歳',
             ],
             [
-                'agesId' => '8',
-                'agesRange' => '81~90歳',
+                'ageId' => '8',
+                'ageRange' => '81~90歳',
             ],
             [
-                'agesId' => '9',
-                'agesRange' => '91~100歳',
+                'ageId' => '9',
+                'ageRange' => '91~100歳',
             ],
         ];
         DB::table('ages')->insert($array);

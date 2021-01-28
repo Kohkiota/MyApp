@@ -25,6 +25,17 @@
         <td>年齢：</td>
         <td>
             <select name="age">
+                @foreach($items as $item)
+                    {{-- $agesId = $item->$agesId; --}}
+                    {{-- $agesRange = $item->$agesRange; --}}
+                    <option value="{{ $item->agesId }}"
+                        @if($item->agesId == 2)
+                            selected="selected"
+                        @endif
+                    >{{ $item->agesRange }}</option>
+                @endforeach
+            </select>
+            {{-- <select name="age">
                 <option value="0">0~10歳</option>
                 <option value="1">11~20歳</option>
                 <option value="2" selected="selected">21~30歳</option>
@@ -35,9 +46,8 @@
                 <option value="7">71~80歳</option>
                 <option value="8">81~90歳</option>
                 <option value="9">91~100歳</option>
-            </select>
+            </select> --}}
         </td>
-    {{-- <td>{{ Form::select('age', ['～9歳', '10歳~', '20歳~', '30歳~', '40歳~', '50歳~', '60歳~', '70歳~', '80歳~', '90歳~', '100歳~']) }}</td> --}}
     </tr>
     <tr>
         <td>メール：</td>

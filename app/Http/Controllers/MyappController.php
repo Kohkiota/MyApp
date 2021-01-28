@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Memo;
+use App\Models\Age;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\CreateMemoRequest;
@@ -27,7 +28,8 @@ class MyappController extends Controller
 
     public function add()
     {
-        return view('myapp.add');
+        $items = Age::all();
+        return view('myapp.add', compact('items'));
     }
 
     public function create(CreateMemoRequest $request)

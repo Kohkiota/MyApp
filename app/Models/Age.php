@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ages extends Model
+class Age extends Model
 {
     use HasFactory;
     protected $table = ['ages'];
@@ -13,7 +13,7 @@ class Ages extends Model
 
     public function getData()
     {
-        return $this->id . ' : ' . $this->agesId . ' (' . $this->agesRange . ') ';
+        return $this->id . ' : ' . $this->ageId . ' (' . $this->ageRange . ') ';
     }
 
 }

@@ -15,8 +15,8 @@ class CreateAgesTable extends Migration
     {
         Schema::create('ages', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('agesId');
-            $table->string('agesRange');
+            $table->integer('ageId');
+            $table->string('ageRange');
             $table->timestamps();
         });
     }
