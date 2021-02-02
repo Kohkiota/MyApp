@@ -25,7 +25,8 @@
         <td>年齢：</td>
         <td>
         {{-- これ！Array to string conversion errorがでる。このセレクトメニューを下のようなダサいのからスマートに書きたいがためにむつかしくなった。わざわざ感あるが、DBにAgeテーブルを作り、そこからデータとってきてプルダウンメニューの初期値を指定できるようにしたかった。 --}}
-            <select name="age">
+            {{ Form::select('age', $items->ageId, null, ['class' => 'age',  'placeholder' => '選択してください']) }}
+            {{-- <select name="age">
                 @foreach($items as $item)
                     <option value="{{ $item->ageId }}"
                         @if($item->ageId == 2)
@@ -33,7 +34,7 @@
                         @endif
                     >{{ $item->ageRange }}</option>
                 @endforeach
-            </select>
+            </select> --}}
 
             {{-- <select name="age">
                 <option value="0">0~10歳</option>
