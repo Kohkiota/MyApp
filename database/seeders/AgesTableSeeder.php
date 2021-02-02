@@ -16,43 +16,43 @@ class AgesTableSeeder extends Seeder
     {
         $array = [
             [
-                'ageId' => '0',
+                'ageId' => 0,
                 'ageRange' => '0~10歳',
             ],
             [
-                'ageId' => '1',
+                'ageId' => 1,
                 'ageRange' => '11~20歳',
             ],
             [
-                'ageId' => '2',
+                'ageId' => 2,
                 'ageRange' => '21~30歳',
             ],
             [
-                'ageId' => '3',
+                'ageId' => 3,
                 'ageRange' => '31~40歳',
             ],
             [
-                'ageId' => '4',
+                'ageId' => 4,
                 'ageRange' => '41~50歳',
             ],
             [
-                'ageId' => '5',
+                'ageId' => 5,
                 'ageRange' => '51~60歳',
             ],
             [
-                'ageId' => '6',
+                'ageId' => 6,
                 'ageRange' => '61~70歳',
             ],
             [
-                'ageId' => '7',
+                'ageId' => 7,
                 'ageRange' => '71~80歳',
             ],
             [
-                'ageId' => '8',
+                'ageId' => 8,
                 'ageRange' => '81~90歳',
             ],
             [
-                'ageId' => '9',
+                'ageId' => 9,
                 'ageRange' => '91~100歳',
             ],
         ];

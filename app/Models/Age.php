@@ -10,6 +10,9 @@ class Age extends Model
     use HasFactory;
     protected $table = ['ages'];
     protected $guarded = ['id'];
+    protected $casts = [
+        'options' => 'array',
+    ];
 
     public function getData()
     {

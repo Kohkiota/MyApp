@@ -28,13 +28,14 @@
                 @foreach($items as $item)
                     {{-- $agesId = $item->$agesId; --}}
                     {{-- $agesRange = $item->$agesRange; --}}
-                    <option value="{{ $item->agesId }}"
-                        @if($item->agesId == 2)
+                    <option value="{{ $item->ageId }}"
+                        @if($item->ageId == 2)
                             selected="selected"
                         @endif
-                    >{{ $item->agesRange }}</option>
+                    >{{ $item->ageRange }}</option>
                 @endforeach
             </select>
+
             {{-- <select name="age">
                 <option value="0">0~10歳</option>
                 <option value="1">11~20歳</option>
