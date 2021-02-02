@@ -5,14 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Memo extends Model
+class Age extends Model
 {
     use HasFactory;
-
+    protected $table = ['ages'];
     protected $guarded = ['id'];
+    protected $casts = [
+        'options' => 'array',
+    ];
 
     public function getData()
     {
-        return $this->id . ' : ' . $this->name . ' (' . $this->age . ') '. $this->mail . ' : '. $this->title . ' : ' . $this->contents;
+        return $this->id . ' : ' . $this->ageId . ' (' . $this->ageRange . ') ';
     }
+
 }

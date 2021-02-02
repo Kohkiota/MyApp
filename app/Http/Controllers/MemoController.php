@@ -4,45 +4,38 @@ namespace App\Http\Controllers;
 
 use App\Models\Memo;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
 
 class MemoController extends Controller
 {
-    public function index(Request $request)
+    // 全てのMemoインスタンスを表示
+    public function index()
     {
-        $items = Memo::all();
-        return view('memo.index', ['items' => $items]);
+        $items = Memo::get();
+        return view('memo.index', compact('items'));
     }
 
-    // public function list()
-    // {
-    //     $items = Memo::all();
-    //     return view('myapp.list', ['items' => $items]);
-    // }
-
-    public function findId(Request $request)
-    {
-        return view('myapp.findId', ['input' => '']);
-    }
-
+    // inputのIDでMemoインスタンスを検索
     public function searchId(Request $request)
     {
-        $item = Memo::find($request->input);
-        $param = ['input' => $request->input, 'item' => $item];
-        return view('myapp.findId', $param);
+        $request = $request->input;
+        $item = Memo::find($request);
+        $param = [
+            'input' => $request,
+            'item' => $item,
+        ];
+        return view('myapp.findId', compact('param'));
     }
 
-    public function findName(Request $request)
-    {
-        return view('myapp.findName', ['input' => '']);
-    }
 
+    // inputした名前でMemoインスタンスを検索
     public function searchName(Request $request)
-    {
-        $item = Memo::find($request->input);
-        $param = ['input' => $request->input, 'item' => $item];
-        return view('myapp.findName', $param);
+    {   $request = $request->input;
+        $item = Memo::find($request);
+        $param = [
+            'input' => $request,
+            'item' => $item,
+        ];
+        return view('myapp.findName', compact('param'));
     }
 
 

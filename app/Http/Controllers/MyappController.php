@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Memo;
+use App\Models\Age;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-// use Illuminate\Database\Eloquest\Model;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\CreateMemoRequest;
 
 class MyappController extends Controller
 {
@@ -15,12 +15,10 @@ class MyappController extends Controller
         return view('myapp.index');
     }
 
-
-    public function list(Request $request)
+    public function list()
     {
-        // $items = DB::table('memos')->paginate(5);
-        $items =  Memo::simplePaginate(5);
-        return view('myapp.list', ['items' => $items]);
+        $items = Memo::paginate(5);
+        return view('myapp.list', compact('items'));
     }
 
     public function complete()
@@ -28,15 +26,15 @@ class MyappController extends Controller
         return view('myapp.complete');
     }
 
-
     public function add()
     {
-        return view('myapp.add');
+        $items = Age::all();
+        return view('myapp.add', compact('items'));
     }
-    public function create(Request $request)
+
+    public function create(CreateMemoRequest $request)
     {
         DB::transaction(function() use($request) {
-            $this->validate($request, Memo::$rules);
             $memo = new Memo;
             $form = $request->all();
             unset($form['_token']);
@@ -48,15 +46,17 @@ class MyappController extends Controller
 
     public function edit(Request $request)
     {
-        $memo = Memo::find($request->id);
-        return view('myapp.edit', ['form' => $memo]);
+        $requestId = $request->id;
+        $form = Memo::find($requestId);
+        return view('myapp.edit', compact('form'));
     }
 
     public function update(Request $request)
     {
         DB::transaction(function() use($request) {
             $this->validate($request, Memo::$rules);
-            $memo = Memo::find($request->id);
+            $requestId = $request->id;
+            $memo = Memo::find($requestId);
             $form = $request->all();
             unset($form['_token']);
             $memo->fill($form)->save();
@@ -66,29 +66,34 @@ class MyappController extends Controller
 
     public function delete(Request $request)
     {
-        $memo = Memo::find($request->id);
-        return view('myapp.del', ['form' => $memo]);
+        $requestId = $request->id;
+        $form = Memo::find($requestId);
+        return view('myapp.del', compact('form'));
     }
 
     public function remove(Request $request)
     {
-        Memo::find($request->id)->delete();
-        return redirect('/myapp/complete')->with('flash_message', '削除が完了しました。');
+        DB::transaction(function() use($request) {
+            $requestId = $request->id;
+            Memo::find($requestId)->delete();
+            return redirect('/myapp/complete')->with('flash_message', '削除が完了しました。');
+        });
     }
 
     //とりあえずフラッシュ（上記）で対応する。
     public function ses_get(Request $request)
     {
-        $add = $request->session()->get('after_add');
-        $edit = $request->session()->get('after_edit');
-        $del = $request->session()->get('after_del');
-        $session = $request->session()->get('after_session');
-        return view('myapp.session', [
-            'after_add' => $add,
-            'after_edit' => $edit,
-            'after_del' => $del,
-            'after_session' => $session,
-        ]);
+        $after_add = $request->session()->get('after_add');
+        $after_edit = $request->session()->get('after_edit');
+        $after_del = $request->session()->get('after_del');
+        $after_session = $request->after_session()->get('after_session');
+        $items = [
+            'after_add' => $after_add,
+            'after_edit' => $after_edit,
+            'after_del' => $after_del,
+            'after_session' => $after_session,
+        ];
+        return view('myapp.session', compact('items'));
     }
     public function ses_put(Request $request)
     {
