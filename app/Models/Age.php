@@ -9,7 +9,7 @@ class Age extends Model
 {
     use HasFactory;
     //これ！Array to string conversion errorがでる。
-    protected $table = ['ages'];
+    protected $table = 'ages';
     protected $guarded = ['id'];
     // protected $casts = [
     //     'options' => 'array',
