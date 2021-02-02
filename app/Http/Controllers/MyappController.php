@@ -17,7 +17,7 @@ class MyappController extends Controller
 
     public function list()
     {
-        $items = Memo::paginate(5);
+        $items = Memo::simplePaginate(5);
         return view('myapp.list', compact('items'));
     }
 
@@ -28,6 +28,7 @@ class MyappController extends Controller
 
     public function add()
     {
+        //これ！Array to string conversion errorがでる。
         $items = Age::all();
         return view('myapp.add', compact('items'));
     }

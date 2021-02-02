@@ -14,6 +14,7 @@ class AgesTableSeeder extends Seeder
      */
     public function run()
     {
+        //これ！Array to string conversion errorがでる。
         $array = [
             [
                 'ageId' => 0,
