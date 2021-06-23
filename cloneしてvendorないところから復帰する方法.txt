@@ -1,0 +1,9 @@
+★vendorないところから復帰する方法
+
+.env.example→コピーし、.envにする！！
+composer install→composer update
+(sqlite、DB browserをインストール？
+sqliteはprecompiled win 64 →　回答しsqlite.dllをc/windows/system32にコピー（Pathに登録されている。）)
+myapp/databaseに「database.sqlite」名の空ファイルを作成する。
+php artisan migrate
+php artisan db:seed
