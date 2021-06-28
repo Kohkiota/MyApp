@@ -44,10 +44,12 @@ footer {
     margin:0px 0px;
 }
 
-/* .hamberger {
+.hamberger {
     margin-left: auto;
+    padding: 0 10 0 0px;
+    font-size: 20px;
     font-weight: bold;
-} */
+}
 
 th {
     background-color: #999;

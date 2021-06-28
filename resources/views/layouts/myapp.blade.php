@@ -16,9 +16,9 @@
     <div class="title">
         @yield('title')
     </div>
-    {{-- <div class="hamberger">
+    <div class="hamberger">
         三
-    </div> --}}
+    </div>
 </header>
 
 
