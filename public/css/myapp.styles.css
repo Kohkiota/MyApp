@@ -1,12 +1,16 @@
 body {
-    margin: 0px 5px;
+    margin: 0px 0px;
 }
+
+/* .content {
+    padding: 10px 10px;
+} */
 
 .headfoot {
     display:flex;
     align-items: center;
-    margin: 0px -5px;
-    padding: 5px 5px;
+    margin: 0px 0px;
+    padding: 10px 10px;
     background-color:#0467e2bf;
     color:#fff;
 }
@@ -24,12 +28,12 @@ footer {
     font-size: 20px;
     font-weight:bold;
     color:#04e2ce;
-    padding:0px 5px;
-    margin:0px 0px;
+    padding:0 5px;
+    margin:0 10 0 0px;
     border: 5px solid;
     border-color:#fff;
     border-radius: 50px;
-    vertical-align: middle;
+    text-decoration: none;
 }
 
 .title {
@@ -39,6 +43,11 @@ footer {
     letter-spacing: 0pt;
     margin:0px 0px;
 }
+
+/* .hamberger {
+    margin-left: auto;
+    font-weight: bold;
+} */
 
 th {
     background-color: #999;
