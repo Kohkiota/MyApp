@@ -7,15 +7,30 @@
 <div class="btnarea">
     <div class="btnareaone">
         <a class="btn memobtn" href="{{ route('myapp') }}">
-            MEMO
+            <div class="justify">
+                <span>M</span>
+                <span>E</span>
+                <span>M</span>
+                <span>O</span>
+            </div>
         </a>
     </div>
     <div class="btnareatwo">
         <a class="btn halfbtna" href="{{ route('myapp/add') }}">
-            新規メモ
+            <div class="justify">
+                <span>新</span>
+                <span>規</span>
+                <span>メ</span>
+                <span>モ</span>
+            </div>
         </a>
         <a class="btn halfbtnb" href="{{ route('myapp/list') }}">
-            メモ一覧
+            <div class="justify">
+                <span>メ</span>
+                <span>モ</span>
+                <span>一</span>
+                <span>覧</span>
+            </div>
         </a>
     </div>
 </div>

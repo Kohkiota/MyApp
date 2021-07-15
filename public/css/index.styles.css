@@ -6,8 +6,8 @@
     word-break: break-all;
     background-color: #1da1f2;
     color: white;
-    border-radius: 20px;
-    padding:10px;
+    border-radius: 23px;
+    padding: 0.23em 1em;
 }
 
 .btnarea {
@@ -36,4 +36,9 @@
 .halfbtnb {
     font-size:40px;
     width: 50%;
+}
+
+.justify {
+    display:flex;
+    justify-content: space-between;
 }
