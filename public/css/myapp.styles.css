@@ -11,7 +11,7 @@ body {
     align-items: center;
     margin: 0px 0px;
     padding: 10px 10px;
-    background-color:#0467e2bf;
+    background-color:#1da1f2;
     color:#fff;
 }
 
@@ -27,7 +27,7 @@ footer {
 .logo {
     font-size: 20px;
     font-weight:bold;
-    color:#04e2ce;
+    color:#fff;
     padding:0 5px;
     margin:0 10 0 0px;
     border: 5px solid;
@@ -39,7 +39,6 @@ footer {
 .title {
     font-size: 25px;
     font-weight: bold;
-    color: #f6f6f6;
     letter-spacing: 0pt;
     margin:0px 0px;
 }
