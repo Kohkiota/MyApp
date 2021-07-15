@@ -3,6 +3,7 @@
     font-weight: bold;
     border: 3px solid;
     text-decoration: none;
+    word-break: break-all;
 }
 
 .btnarea {
