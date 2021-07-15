@@ -3,7 +3,7 @@
     font-weight: bold;
     border: 3px solid;
     text-decoration: none;
-    word-break: break-all;
+    /* word-break: break-all; */
     background-color: #1da1f2;
     color: white;
     border-radius: 23px;
@@ -15,14 +15,19 @@
     text-align:center;
 }
 
-.btnareaone {
+/* .btnareaone {
     width: 100%;
     text-align: center;
-}
+} */
 
 .btnareatwo {
     display:flex;
     margin-top: 10px;
+}
+@media screen and (max-width: 528px) {
+    .btnareatwo{
+     flex-direction: column;
+    }
 }
 
 .memobtn {
@@ -33,12 +38,23 @@
     width: 50%;
     margin-right:10px;
 }
+@media screen and (max-width: 528px) {
+    .halfbtna {
+        width: 100%;
+    }
+}
+
 .halfbtnb {
     font-size:40px;
     width: 50%;
 }
+@media screen and (max-width: 528px) {
+    .halfbtnb {
+        width: 100%;
+    }
+}
 
 .justify {
-    display:flex;
+    display:block;
     justify-content: space-between;
 }

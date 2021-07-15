@@ -5,7 +5,7 @@
 
 @section('content')
 <div class="btnarea">
-    <div class="btnareaone">
+    <div>
         <a class="btn memobtn" href="{{ route('myapp') }}">
             <div class="justify">
                 <span>M</span>
