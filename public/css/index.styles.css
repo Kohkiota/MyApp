@@ -1,13 +1,14 @@
 .btn {
-    display:block;
+    display:flex;
+    justify-content: space-evenly;
     font-weight: bold;
     border: 3px solid;
     text-decoration: none;
-    /* word-break: break-all; */
     background-color: #1da1f2;
     color: white;
     border-radius: 23px;
-    padding: 0.23em 1em;
+    padding: 0.3em 0.3em;
+    text-align: center;
 }
 
 .btnarea {
@@ -15,46 +16,29 @@
     text-align:center;
 }
 
-/* .btnareaone {
-    width: 100%;
-    text-align: center;
-} */
-
-.btnareatwo {
-    display:flex;
-    margin-top: 10px;
-}
-@media screen and (max-width: 528px) {
-    .btnareatwo{
-     flex-direction: column;
-    }
-}
-
 .memobtn {
     font-size:80px;
 }
-.halfbtna {
-    font-size:40px;
-    width: 50%;
-    margin-right:10px;
+
+
+.btnareatwo {
+    width:100%;
+    font-size: 40px;
+    display: flex;
+    margin-top: 10px;
 }
-@media screen and (max-width: 528px) {
-    .halfbtna {
-        width: 100%;
-    }
+
+.halfbtna {
+    flex-grow:1;
+    margin-right:5px;
 }
 
 .halfbtnb {
-    font-size:40px;
-    width: 50%;
-}
-@media screen and (max-width: 528px) {
-    .halfbtnb {
-        width: 100%;
-    }
+    flex-grow:1;
+    margin-left:5px;
 }
 
-.justify {
-    display:block;
-    justify-content: space-between;
-}
+/* @media screen and (max-width: 576px) { } */
+/* @media screen and (max-width: 768px) { } */
+/* @media screen and (max-width: 992px) { } */
+/* @media screen and (max-width: 1200px) { } */

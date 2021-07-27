@@ -5,16 +5,14 @@
 
 @section('content')
 <div class="btnarea">
-    <div>
-        <a class="btn memobtn" href="{{ route('myapp') }}">
-            <div class="justify">
-                <span>M</span>
-                <span>E</span>
-                <span>M</span>
-                <span>O</span>
-            </div>
-        </a>
-    </div>
+    <a class="btn memobtn" href="{{ route('myapp') }}">
+        <div class="justify">
+            <span>M</span>
+            <span>E</span>
+            <span>M</span>
+            <span>O</span>
+        </div>
+    </a>
     <div class="btnareatwo">
         <a class="btn halfbtna" href="{{ route('myapp/add') }}">
             <div class="justify">
