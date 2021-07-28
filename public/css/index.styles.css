@@ -38,7 +38,31 @@
     margin-left:5px;
 }
 
-/* @media screen and (max-width: 576px) { } */
+/* @media screen and (max-width: 576px) {
+    .memobtn {
+        font-size:80px;
+    }
+
+    .btnareatwo {
+        width:100%;
+        font-size: 40px;
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .halfbtna {
+        flex-grow:1;
+        margin-right:5px;
+    }
+
+    .halfbtnb {
+        flex-grow:1;
+        margin-left:5px;
+    }
+
+ } */
+
+
 /* @media screen and (max-width: 768px) { } */
 /* @media screen and (max-width: 992px) { } */
 /* @media screen and (max-width: 1200px) { } */

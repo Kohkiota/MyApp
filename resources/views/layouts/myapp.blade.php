@@ -21,12 +21,19 @@
     </div>
 </header>
 
-
 @if (session('flash_message'))
     <div class="flash_message">
         {{ session('flash_message') }}
     </div>
 @endif
+
+<div class="navi">
+    <a href="{{  route('myapp') }}" class="navibtn nav1">home</a>
+    <a href="{{  route('myapp/add') }}" class="navibtn nav2">new memo</a>
+    <a href="{{  route('myapp/list') }}" class="navibtn nav3">memo list</a>
+    <a href="{{  route('myapp') }}" class="navibtn nav4">memo</a>
+    <a href="{{  route('myapp') }}" class="navibtn nav5">demo</a>
+</div>
 
 <div class="content">
     @yield('content')
