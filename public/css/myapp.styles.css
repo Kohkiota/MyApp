@@ -67,15 +67,29 @@ td {
 }
 
 .navibtn {
-    /* display:flex; */
-    flex-grow: 1;
-    justify-content: space-evenly;
+    width:20%;
+    justify-content: space-around;
     font-weight: bold;
     border: 3px solid;
     text-decoration: none;
-    background-color: #1da1f2;
     color: white;
-    border-radius: 23px;
+    /* border-radius: 8px; */
     padding: 0.3em 0.3em;
     text-align: center;
+}
+
+.nav1{
+    background-color: aqua;
+}
+.nav2{
+    background-color: #1df2cf;
+}
+.nav3{
+    background-color: #aff035;
+}
+.nav4{
+    background-color: #e92b2b;
+}
+.nav5{
+    background-color: #f2a71d;
 }
