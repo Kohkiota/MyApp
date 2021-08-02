@@ -79,17 +79,17 @@ td {
 }
 
 .nav1{
-    background-color: aqua;
+    background: linear-gradient(aqua 50%, transparent);
 }
 .nav2{
-    background-color: #1df2cf;
+    background: linear-gradient(#1df2cf 50%, transparent);
 }
 .nav3{
-    background-color: #aff035;
+    background: linear-gradient(#aff035 50%, transparent);
 }
 .nav4{
-    background-color: #e92b2b;
+    background: linear-gradient(#e92b2b 50%, transparent);
 }
 .nav5{
-    background-color: #f2a71d;
+    background: linear-gradient(#f2a71d 50%, transparent);
 }
