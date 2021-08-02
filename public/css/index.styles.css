@@ -11,20 +11,15 @@
     text-align: center;
 }
 
-.btnarea {
-    width:100%;
-    text-align:center;
-}
-
 .memobtn {
     font-size:80px;
 }
-
 
 .btnareatwo {
     width:100%;
     font-size: 40px;
     display: flex;
+    flex-wrap:wrap;
     margin-top: 10px;
 }
 
@@ -38,31 +33,12 @@
     margin-left:5px;
 }
 
-/* @media screen and (max-width: 576px) {
-    .memobtn {
-        font-size:80px;
-    }
-
-    .btnareatwo {
-        width:100%;
-        font-size: 40px;
-        display: flex;
-        margin-top: 10px;
-    }
-
+/* @media (min-width: 576px) {
     .halfbtna {
         flex-grow:1;
-        margin-right:5px;
     }
 
     .halfbtnb {
         flex-grow:1;
-        margin-left:5px;
     }
-
- } */
-
-
-/* @media screen and (max-width: 768px) { } */
-/* @media screen and (max-width: 992px) { } */
-/* @media screen and (max-width: 1200px) { } */
+} */
