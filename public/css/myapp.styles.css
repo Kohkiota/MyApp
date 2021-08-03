@@ -94,3 +94,55 @@ td {
 .nav5{
     background: linear-gradient(#f2a71d 50%, transparent);
 }
+
+.side {
+    width:100%;
+    /* display:flex; */
+}
+
+.sidebtn {
+    /* width:100%; */
+    display:block;
+    justify-content: space-around;
+    font-weight: bold;
+    border: 3px solid;
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    /* border-radius: 13px; */
+    padding: 0.3em 0.3em;
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .sideContent{
+        width:100%;
+        display:flex;
+        flex-direction: row-reverse;
+    }
+
+    .side {
+        width:20%;
+        /* flex-grow:1; */
+    }
+
+    .sidebtn {
+        /* width:100%; */
+        display:block;
+        justify-content: space-around;
+        font-weight: bold;
+        border: 3px solid;
+        text-decoration: none;
+        color: white;
+        background-color: green;
+        /* border-radius: 13px; */
+        padding: 0.3em 0.3em;
+        text-align: center;
+    }
+
+    .content {
+        padding: 10px 10px;
+        /* flex-grow:1; */
+    }
+
+}

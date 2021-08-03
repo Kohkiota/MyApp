@@ -35,9 +35,19 @@
     <a href="{{  route('myapp') }}" class="navibtn nav5">demo</a>
 </div>
 
-<div class="content">
-    @yield('content')
+<div class="sideContent">
+    <div class="content">
+        @yield('content')
+    </div>
+    <div class="side">
+        <a href="{{  route('myapp') }}" class="sidebtn">home</a>
+        <a href="{{  route('myapp/add') }}" class="sidebtn">new memo</a>
+        <a href="{{  route('myapp/list') }}" class="sidebtn">memo list</a>
+        <a href="{{  route('myapp') }}" class="sidebtn">memo</a>
+        <a href="{{  route('myapp') }}" class="sidebtn">demo</a>
+    </div>
 </div>
+
 
 <footer class="headfoot">
     @yield('footer')
