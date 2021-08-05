@@ -19,34 +19,32 @@
     width:100%;
     font-size: 40px;
     display: flex;
-    flex-wrap:wrap;
     margin-top: 10px;
 }
 
-.halfbtna {
-    flex-grow:1;
-    margin-right:5px;
+.btnareatwo > .btn {
+    width: calc((100% - 10px) / 2);
+    margin-right: 10px;
 }
 
-.halfbtnb {
-    flex-grow:1;
-    margin-left:5px;
+.btnareatwo > .btn:nth-child(even) {
+    margin-right:0;
 }
 
 @media screen and (max-width: 576px) {
     .btnareatwo {
         width:100%;
         font-size: 40px;
-        display: block;
+        flex-wrap:wrap;
         margin-top: 10px;
     }
 
-    .halfbtna {
-        margin-right:0px;
+    .btnareatwo > .btn {
+        width:100%;
+        margin-right: 0px;
     }
 
-    .halfbtnb {
-        margin-left:0px;
-        margin-top:10px;
+    .btnareatwo > .btn:nth-child(even) {
+        margin-top:10;
     }
 }
