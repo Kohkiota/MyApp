@@ -1,6 +1,7 @@
 .btn {
     display:flex;
     justify-content: space-evenly;
+    box-sizing: border-box;
     font-weight: bold;
     border: 3px solid;
     text-decoration: none;
@@ -33,10 +34,7 @@
 
 @media screen and (max-width: 576px) {
     .btnareatwo {
-        width:100%;
-        font-size: 40px;
-        flex-wrap:wrap;
-        margin-top: 10px;
+        display:block;
     }
 
     .btnareatwo > .btn {

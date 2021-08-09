@@ -70,6 +70,7 @@ td {
 .navibtn {
     width:20%;
     justify-content: space-around;
+    box-sizing: border-box;
     font-weight: bold;
     border: 3px solid;
     text-decoration: none;
