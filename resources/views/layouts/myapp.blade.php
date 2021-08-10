@@ -45,6 +45,9 @@
         <a href="{{  route('myapp/list') }}" class="sidebtn">memo list</a>
         <a href="{{  route('myapp') }}" class="sidebtn">memo</a>
         <a href="{{  route('myapp') }}" class="sidebtn">demo</a>
+        <a href="{{  route('myapp') }}" class="sidebtn sidebtn2">demo</a>
+        <a href="{{  route('myapp') }}" class="sidebtn sidebtn2">demo</a>
+        <a href="{{  route('myapp') }}" class="sidebtn sidebtn3">demo</a>
     </div>
 </div>
 

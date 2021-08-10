@@ -102,8 +102,7 @@ td {
 
 .sidebtn {
     display:block;
-    height: 30px;
-    line-height: 30px;
+    box-sizing: border-box;
     padding: 0.3em 0.3em;
     border: 3px solid;
     text-align: center;
@@ -113,6 +112,16 @@ td {
     text-decoration: none;
     background-color: rgba(255, 255, 0, 0.829);
 }
+
+.sidebtn2 {
+    background-color: blue;
+}
+
+.sidebtn3 {
+    background-color: crimson;
+}
+
+
 
 @media screen and (min-width: 992px) {
     .sideContent{
@@ -124,23 +133,10 @@ td {
     .side {
         width:250px;
         height:100%;
-        /* position:absolute; */
     }
 
     .sidebtn {
-        display:block;
-        height: 30px;
-        line-height: 30px;
-        padding: 0.3em 0.3em;
-        border: 3px solid;
-        text-align: center;
-        font-size:26px;
-        color: black;
-        font-weight: bold;
-        text-decoration: none;
-        /* justify-content: space-around; */
-        background-color: rgba(255, 255, 0, 0.829);
-
+        width: 250px;
     }
 
     .content {
