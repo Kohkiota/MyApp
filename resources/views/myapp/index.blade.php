@@ -31,6 +31,9 @@
             </div>
         </a>
     </div>
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia sequi ex porro similique inventore beatae excepturi doloremque magni explicabo ad, voluptatem in omnis voluptate itaque architecto? Dolorum facere aut, quia ad consequatur repellat mollitia cumque, aspernatur error et vel est molestiae. Laudantium fuga optio provident aspernatur quis animi, molestiae id harum quos omnis, enim, dolores ratione maiores deleniti praesentium quaerat obcaecati ducimus beatae explicabo velit cupiditate! Fuga mollitia non cum beatae magnam quaerat officia natus officiis at veritatis libero iusto debitis aut blanditiis aperiam, rerum ducimus consectetur harum! Aspernatur, enim similique maxime dolores magnam expedita libero natus. Inventore, amet itaque.
+    </div>
 </div>
 @endsection
 
