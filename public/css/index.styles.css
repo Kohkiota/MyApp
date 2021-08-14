@@ -32,6 +32,30 @@
     margin-right:0;
 }
 
+.paragraph {
+    /* width: 100%; */
+    margin:0px 30px;
+}
+
+.row {
+    display:flex;
+    margin:30 0px;
+}
+.row:nth-child(even){
+    flex-direction:row-reverse;
+}
+
+.photo, .text {
+    width:50%;
+    box-sizing: border-box;
+    padding:30px;
+}
+
+.photo {
+    background-color: cadetblue;
+    background: url("/img/test.jpg") no-repeat center center;
+}
+
 @media screen and (max-width: 576px) {
     .btnareatwo {
         display:block;
