@@ -8,8 +8,8 @@ body {
 
 .headfoot {
     display:flex;
+    height:35px;
     align-items: center;
-    margin: 0px 0px;
     padding: 12px;
     background-color:#1da1f2;
     color:#fff;
@@ -24,6 +24,13 @@ footer {
     font-size:15px;
     margin-top: 10px;
 }
+
+.fixed{
+    position:fixed;
+    width:100%;
+    top:0;
+}
+
 .logo {
     font-size: 20px;
     font-weight:bold;
@@ -95,6 +102,10 @@ td {
     background: linear-gradient(#f2a71d 50%, transparent);
 }
 
+.sideContent {
+    margin-top: 100px;
+}
+
 .side {
     width:100%;
     margin-bottom: 10px;
@@ -144,4 +155,11 @@ td {
         flex-grow:1;
     }
 
+}
+
+@media screen and (max-width: 576px) {
+    .side{
+        margin-top:100px;
+        position:fixed;
+    }
 }
