@@ -115,10 +115,10 @@ td {
     display:block;
     box-sizing: border-box;
     padding: 0.3em 0.3em;
-    border: 3px solid;
+    /* border: 3px solid; */
     text-align: center;
     font-size:26px;
-    color: black;
+    color: #335593;
     font-weight: bold;
     text-decoration: none;
     background-color: rgba(255, 255, 0, 0.829);
@@ -152,7 +152,7 @@ td {
 
     .content {
         padding: 10px 10px;
-        flex-grow:1;
+        /* flex-grow:1; */
     }
 
 }
@@ -160,6 +160,6 @@ td {
 @media screen and (max-width: 576px) {
     .side{
         margin-top:100px;
-        position:fixed;
+        /* position:fixed; */
     }
 }
