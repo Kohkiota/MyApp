@@ -8,11 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Age extends Model
 {
     use HasFactory;
-    protected $table = ['ages'];
+    //これ！Array to string conversion errorがでる。
+    protected $table = 'ages';
     protected $guarded = ['id'];
-    protected $casts = [
-        'options' => 'array',
-    ];
+    // protected $casts = [
+    //     'options' => 'array',
+    // ];
 
     public function getData()
     {

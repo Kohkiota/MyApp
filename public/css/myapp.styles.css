@@ -1,13 +1,17 @@
 body {
-    margin: 0px 5px;
+    margin: 0px 0px;
+}
+
+.content {
+    padding: 10px 10px;
 }
 
 .headfoot {
     display:flex;
+    height:35px;
     align-items: center;
-    margin: 0px -5px;
-    padding: 5px 5px;
-    background-color:#0467e2bf;
+    padding: 12px;
+    background-color:#1da1f2;
     color:#fff;
 }
 
@@ -18,26 +22,39 @@ header {
 footer {
     justify-content: flex-end;
     font-size:15px;
-    margin-left: 50px;
+    margin-top: 10px;
 }
+
+.fixed{
+    position:fixed;
+    width:100%;
+    top:0;
+}
+
 .logo {
     font-size: 20px;
     font-weight:bold;
-    color:#04e2ce;
-    padding:0px 5px;
-    margin:0px 0px;
+    color:#fff;
+    padding:0 5px;
+    margin:0 10 0 0px;
     border: 5px solid;
     border-color:#fff;
     border-radius: 50px;
-    vertical-align: middle;
+    text-decoration: none;
 }
 
 .title {
     font-size: 25px;
     font-weight: bold;
-    color: #f6f6f6;
     letter-spacing: 0pt;
     margin:0px 0px;
+}
+
+.hamberger {
+    margin-left: auto;
+    padding: 0 10 0 0px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 th {
@@ -50,4 +67,99 @@ td {
     border: solid 1px #aaa;
     color: #999;
     padding: 5px 10px;
+}
+
+.navi {
+    display:flex;
+}
+
+.navibtn {
+    width:20%;
+    justify-content: space-around;
+    box-sizing: border-box;
+    font-weight: bold;
+    border: 3px solid;
+    text-decoration: none;
+    color: white;
+    border-radius: 13px;
+    padding: 0.3em 0.3em;
+    text-align: center;
+}
+
+.nav1{
+    background: linear-gradient(aqua 50%, transparent);
+}
+.nav2{
+    background: linear-gradient(#1df2cf 50%, transparent);
+}
+.nav3{
+    background: linear-gradient(#aff035 50%, transparent);
+}
+.nav4{
+    background: linear-gradient(#e92b2b 50%, transparent);
+}
+.nav5{
+    background: linear-gradient(#f2a71d 50%, transparent);
+}
+
+.sideContent {
+    margin-top: 100px;
+}
+
+.side {
+    width:100%;
+    margin-bottom: 10px;
+}
+
+.sidebtn {
+    display:block;
+    box-sizing: border-box;
+    padding: 0.3em 0.3em;
+    /* border: 3px solid; */
+    text-align: center;
+    font-size:26px;
+    color: #335593;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgba(255, 255, 0, 0.829);
+}
+
+.sidebtn2 {
+    background-color: blue;
+}
+
+.sidebtn3 {
+    background-color: crimson;
+}
+
+
+
+@media screen and (min-width: 992px) {
+    .sideContent{
+        width:100%;
+        display:flex;
+        flex-direction: row-reverse;
+    }
+
+    .side {
+        width:250px;
+        height:100%;
+    }
+
+    .sidebtn {
+        width: 250px;
+    }
+
+    .content {
+        padding: 10px 10px;
+        /* flex-grow:1; */
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .side{
+        margin-top:100px;
+        /* position:fixed; */
+    }
 }

@@ -1,0 +1,31 @@
+★vendorないところから復帰する方法
+
+.env.example→コピーし、.envにする！！
+composer install→composer update
+(sqlite、DB browserをインストール？
+sqliteはprecompiled win 64 →　回答しsqlite.dllをc/windows/system32にコピー（Pathに登録されている。）)
+myapp/databaseに「database.sqlite」名の空ファイルを作成する。
+php artisan migrate
+php artisan db:seed
+
+composer install と composer updateの違い
+
+この記事は最終更新日から5年以上が経過しています。
+まずは改めて各ファイルの役割から。
+
+composer.lock：現在使用しているバンドルのバージョン等が管理されます。
+composer.json：必要となるバンドルを記述します。
+composer.pharで実行。
+
+んで、composer install と composer updateですが、
+
+composer install：composer.lockに書かれている各ライブラリをインストールする。
+composer update：composer.jsonをもとに各ファイルを最新版にアップデートする。
+
+ということでした。ユースケースとしては
+
+新しい環境ではじめにインストールするとき：composer install
+何か新しいバンドルを追加したい：composer.jsonにかいてcomposer update
+本番のライブラリを最新版にしたい：開発環境でcomposer updateして問題なければcomposer.lockファイルを本番にコピーしてcomposer intallする
+
+というかんじでしょうか。開発環境ではupdateのほうが頻繁に使うことになるかと思います。

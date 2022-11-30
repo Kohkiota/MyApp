@@ -1,37 +1,73 @@
 .btn {
-    display:block;
+    display:flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
     font-weight: bold;
     border: 3px solid;
     text-decoration: none;
-}
-
-.btnarea {
-    margin:10px 0px;
-    width:100%;
-    text-align:center;
-}
-
-.btnareaone {
-    width:100%;
-}
-
-.btnareatwo {
-    display:flex;
-    justify-content:center;
-    width:100%;
-    margin-top: 10px;
+    background-color: #1da1f2;
+    color: white;
+    border-radius: 23px;
+    padding: 0.3em 0.3em;
+    text-align: center;
 }
 
 .memobtn {
     font-size:80px;
-    width: 100%;
 }
-.halfbtna {
-    font-size:40px;
-    width: 50%;
-    margin-right:10px;
+
+.btnareatwo {
+    width:100%;
+    font-size: 40px;
+    display: flex;
+    margin: 10 0px;
 }
-.halfbtnb {
-    font-size:40px;
-    width: 50%;
+
+.btnareatwo > .btn {
+    width: calc((100% - 10px) / 2);
+    margin-right: 10px;
+}
+
+.btnareatwo > .btn:nth-child(even) {
+    margin-right:0;
+}
+
+.paragraph {
+    /* width: 100%; */
+    margin:0px 30px;
+}
+
+.row {
+    display:flex;
+    margin:30 0px;
+}
+.row:nth-child(even){
+    flex-direction:row-reverse;
+}
+
+.photo, .text {
+    width:50%;
+    box-sizing: border-box;
+    padding:30px;
+}
+
+.photo {
+    background-color: cadetblue;
+    background: url("/img/test.jpg") no-repeat center center;
+}
+
+@media screen and (max-width: 576px) {
+    .btnareatwo {
+        display:block;
+    }
+
+    .btnareatwo > .btn {
+        width:100%;
+        margin-right: 0px;
+    }
+
+    .btnareatwo > .btn:nth-child(even) {
+        margin-top:10;
+    }
+
 }

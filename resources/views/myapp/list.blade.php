@@ -48,7 +48,9 @@
     @endforeach
     </table>
     <div class="links">
+        {{-- {{ $items->links('pagination::tailwind') }} --}}
         {{ $items->links() }}
+        {{-- {{ $items->links('view.list', ['items' => 'items']) }} --}}
     </div>
 @endsection
 
